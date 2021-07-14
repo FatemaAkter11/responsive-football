@@ -7,9 +7,6 @@ body{
 }
 .container{
     background-color: #FFFFFF;
-    width: 1050px;
-    height: 474px;    
-    margin-top: 50px;
 }
 
 /* Header part styles start */
@@ -43,6 +40,7 @@ body{
    height: 30px;
    font-size: 16px;
    background-color:  #E02C6D;
+   padding: 10px 15px;
    color: #FFFFFF;
    text-decoration: none;
    margin: 30px auto; 
@@ -86,22 +84,21 @@ body{
    padding-left: 5px;
 }
 
-/* main part styles */
+/*------- main part styles------ */
+/* players styles */
 .players{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-column-gap: 30px;
-   
+    grid-row-gap: 30px;
+     margin: 50px; 
+    justify-content: center;
 }
-.player{
-    box-shadow: 10px 10px 5px grey;
-    border-radius: 10px;
-    width: 300px;
-    height: 500px;
+.player-profile img{
+    width: 350px;
+    height: 300px;
 }
-.player-banner img{
-    width: 250px;
-    height: 250px;
-   padding-left: 20px;
-   margin-top: 10px;
-}
+.player-profile{
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    margin: 20px;
+    padding: 40px;
+} 
