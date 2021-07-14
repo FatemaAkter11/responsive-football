@@ -4,6 +4,7 @@
 /* Common css */
 body{
     font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 .container{
     background-color: #FFFFFF;
@@ -83,6 +84,10 @@ body{
 .fa-arrow-right{
    padding-left: 5px;
 }
+.banner-image:hover{
+    transform: scale(0.5); 
+    transition: transform 3s linear;
+}
 
 /*------- main part styles------ */
 /* players styles */
@@ -102,28 +107,73 @@ body{
     margin: 20px;
     padding: 40px;
 } 
+/* highlight styles */
+.highlights{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.highlight-last{
+    width: 30%;
+}
+.highlight-left{
+    margin-left: 50px;
+}
+.highlight-left h1{
+    font-size: 40px;   
+}
+.watch-btn{
+    background-color: #E02C6D;
+    text-align: center;
+    width: 35%;
+    padding: 10px 24px;
+    margin-left: 50px;
+}
+.watch-btn a{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+.fas {
+    font-size: 20px;
+    color: white;
+}
+.game-profile img{
+    width: 567px;
+    height: 427px;
+    margin-right: 50px;
+}
+.game-profile:hover img{
+    transform: scale(0.5) rotate(360deg); 
+    transition: transform 2s ease-in-out;
 
-/* footer styles */
+}
+/* footer styles start */
 footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
 }
 .logo img{
     width: 483.87px;
     height: 110px;
 }
-/* .icon a{
-     background-color: #969BAA; 
-     border-radius:400px ;
-} */
+.icon a img{
+    width: 40px;
+}
 .fab{
      padding-left: 15px; 
      margin-left: 10px;
      color: gray;
 }
 .text p{
-    margin: 10px auto;
     color: black;
+    text-align: center;
 }
+
+
+/*-------- Media Query part -------*/
+
+/* Mobile device */
