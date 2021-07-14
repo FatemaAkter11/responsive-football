@@ -177,7 +177,7 @@ footer{
 
 /*-------- Media Query part -------*/
 
-/* Mobile device */
+/*--- Mobile device--- */
 @media only screen and (max-width:688px) {
 
 /* Header responsive */
@@ -253,13 +253,28 @@ footer{
     
     }
 
-    /* Tablet devices */
+    /*--- Tablet devices--- */
+
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
         .container{
             width: 90%;
+        }
+        /* Header responsive */
+        .nav-header{
+        display: none;
         }
          /* player responsive */
     .players{
         grid-template-columns: repeat(2,1fr);  
     }
+     /* Highlight responsive */
+     .highlights{
+         width: 100%;
+        display: grid;
+        flex-direction: column; 
+    }
+    /* footer responsive */
+    .footer{
+        width: 100%;
+    } 
     }
