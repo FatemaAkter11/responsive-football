@@ -6,15 +6,21 @@ body{
     font-family: 'Poppins', sans-serif;
     margin: 0;
 }
+header{
+    background-color:darkblue;
+    height: 677px;
+}
 .container{
-    background-color: #FFFFFF;
+    width: 80%;
+    margin: auto;
+}
+:root{
+    --main-color:#2D25A0;
+    --btn-color:#E02C6D;
 }
 
+
 /* Header part styles start */
-.header-container{
-    background-color: #2D25A0;
-    height: 677px;  
-}
 .menu{
     display: flex;
     justify-content: space-between;
@@ -25,8 +31,8 @@ body{
 .nav-list{
     list-style: none;
      padding-top: 20px; 
-     padding-left: 70px;
-}
+    padding-right: 30px;
+} 
 .nav-list a{
     text-decoration: none;
     font-size: 16px;
@@ -40,44 +46,36 @@ body{
    width: 120px;
    height: 30px;
    font-size: 16px;
-   background-color:  #E02C6D;
+   background-color:var(--btn-color);
    padding: 10px 15px;
    color: #FFFFFF;
    text-decoration: none;
    margin: 30px auto; 
+   margin-right: 170px;
    border-radius: 5px; 
 }
 
 
 /* banner styles */
 .banner-container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     margin-top: 50px;
 }
-.title{
-    position: absolute;
-    width: 485px;
-    height: 230px;
-    left: 90px;
-    top: 150px; 
+.title{ 
     font-size: 64px;
     color: #FFFFFF;
-    padding-left: 30px;
+    margin-left: 20px;
 }
 .banner-image img{
-    position: absolute;
-    width: 550px;
-    height: 430px;
-    left: 800px;
-    top: 153px;
+   width: 80%;
+   margin-left: 50px;
 }
 .btn2{
-    position: relative;
     font-size: 16px;
-    top: 350px;
-    left: 110px;
     padding: 10px 24px;
-    background-color:  #E02C6D;
+    margin-left: 20px;
+    background-color:var(--btn-color);
     color: #FFFFFF;
     text-decoration: none;
 }
@@ -85,33 +83,36 @@ body{
    padding-left: 5px;
 }
 .banner-image:hover{
-    transform: scale(0.5); 
+    transform: scale(0.6); 
     transition: transform 3s linear;
 }
 
 /*------- main part styles------ */
 /* players styles */
+.player-container{
+    margin-top: 40px;
+}
 .players{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-row-gap: 30px;
-     margin: 50px; 
-    justify-content: center;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
 }
 .player-profile img{
-    width: 350px;
-    height: 300px;
+    width: 100%;
+    padding-top: 5px;
 }
 .player-profile{
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
-    margin: 20px;
-    padding: 40px;
+    padding: 30px; 
+    margin: 10px 0; 
 } 
 /* highlight styles */
 .highlights{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 50px;
 }
 .highlight-last{
     width: 30%;
@@ -123,7 +124,7 @@ body{
     font-size: 40px;   
 }
 .watch-btn{
-    background-color: #E02C6D;
+    background-color: var(--btn-color);
     text-align: center;
     width: 35%;
     padding: 10px 24px;
@@ -157,7 +158,7 @@ footer{
     margin-top: 100px;
 }
 .logo img{
-    width: 483.87px;
+    width: 483px;
     height: 110px;
 }
 .icon a img{
@@ -177,3 +178,78 @@ footer{
 /*-------- Media Query part -------*/
 
 /* Mobile device */
+@media only screen and (max-width:688px) {
+
+/* Header responsive */
+    .nav-header{
+    display: none;
+    }
+
+    /* banner responsive */
+    .banner-container{
+        grid-template-columns: repeat(1,1fr);
+        grid-row-gap: 40px;
+        align-items: center;
+        margin-right: 80px;
+    }
+    .title{
+        font-size: 16px;
+        text-align: center;
+        margin-right: 30px;
+    }
+    banner-image img{
+        width: 50%;
+        margin-top: 30px;
+        margin-right: 100px;
+    }
+    .btn2{
+       margin: 20px auto;
+    }
+    /* player responsive */
+    .players{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+         margin-right: 150px;  
+    }
+    /* Highlight responsive */
+    .highlights{
+        display: grid;
+        flex-direction: column; 
+    }
+    .highlight-left{
+        align-items: center;
+        margin-left: 110px;
+    }
+    .highlight-left h1{
+        font-size: 16px;
+    }
+    .highlight-left p{
+        width: 50%;
+    }
+    .watch-btn{
+        width: 70%;
+        text-align: center;
+        margin-right: 60px;
+    }
+    .game-profile img{
+        width: 90%;
+        margin: auto;
+    }
+    /* footer responsive */
+    .footer{
+        width: 100%;
+    } 
+    .logo img{
+        width: 60%;
+    }
+    .icon a img{
+        width: 10%;
+        margin-left: 20px;
+    }
+    .text{
+        width: 50%;
+        font-size: 10px; 
+        margin-left: 20px;
+    }
+    
+    }
